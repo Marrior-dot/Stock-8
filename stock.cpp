@@ -8,19 +8,17 @@ using std::cout;
 using std::endl;
 using std::string;
 
-int Stock::listSize = 0;
-int Stock::contentNameSize = 0;
+//int Stock::listSize = 0;
+//int Stock::contentNameSize = 0;
 
-Stock::Stock( const string personName){
-  usr = new Person(personName);
+Stock::Stock(){
 }
 
-Stock::Stock(const string personName, int personAge){
-  usr = new Person(personName, personAge);
+Stock::Stock(const string categoryName){
+  Stock *ptr;
+  *ptr = categoryName; 
 }
 Stock::Stock(const Stock &other) { 
-  usrCopy = new Person(*other.usr);
-  this -> category.nameOfCategory = other.category.nameOfCategory;  
 }
 Stock::~Stock(){}
 
@@ -29,7 +27,7 @@ string Stock::getStockName() {
 }
 
 void Stock::operator << (string contentName){
-  while (contentName.size() > contentNameSize) {
+ /* while (contentName.size() > contentNameSize) {
     cout << "Escolha um nome para o conteudo com comprimento menor que: "
          << contentNameSize << "\n";
     cin >> contentName;
@@ -52,7 +50,7 @@ void Stock::operator << (string contentName){
       cout << "O conteudo de " 
       << contentName << " não será inserido";
       return;
-  }
+  }*/
   contentList.push_back(contentName);
 }
 
@@ -66,7 +64,7 @@ void Stock::printContentList() {
 string Stock::getContentListItem(int position){
   return contentList[position];
 }
-
+/*
 void Stock::setContentNameSize(int contentNameSize) {
   this -> contentNameSize = contentNameSize;
 }
@@ -74,14 +72,15 @@ void Stock::setContentNameSize(int contentNameSize) {
 void Stock::setListSize(int listSize){
   this -> listSize = listSize;
 }
-
+*/
+/*
 int Stock::getListSize(){
   return listSize;
-} 
-
+} */
+/*
 void Stock::operator == (int listSize) {
   this -> listSize = listSize;
-}
+}*/
 
 
 void Stock::operator = ( string categoryName ){

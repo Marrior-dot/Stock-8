@@ -10,17 +10,20 @@ using std::string;
 class Warehouse : public Stock
 {
     public:
-    Warehouse();
-    Warehouse( int );
+    Warehouse( );
+    Warehouse( const string, int);
     Warehouse( const Warehouse& );
-    ~Warehouse();
+    virtual ~Warehouse();
 
-    void operator = ( int );
-    void operator != ( int );
+    virtual void operator = ( int ) = 0;
+    virtual void operator != ( int ) = 0;
+    void setWareHouseName( const string );
+    void setTemperature(int);
+    void printInfo( const string );
 
     private:
-
-    int types;
+    string wareHouseName;
+    int temperature;
 };
 
 #endif

@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
 #include "DB.h"
-#include "person.cpp"
 
 using std::cin;
 using std::cout;

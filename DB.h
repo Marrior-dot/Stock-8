@@ -1,6 +1,6 @@
 #ifndef DB_H
 #define DB_H
-#include "stock.cpp"
+#include "stock.h"
 #include <string>
 #include <iostream>
 
